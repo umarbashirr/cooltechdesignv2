@@ -1,0 +1,80 @@
+@use '../variables';
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+	margin: 100px 0;
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__subtitle {
+		display: inline-block;
+		background-color: variables.$primary-color;
+		color: variables.$white-color;
+		font-size: 12px;
+		padding: 0.4rem 0.8rem;
+		border-radius: 50px;
+	}
+
+	&__title {
+		margin: 1rem 0;
+		font-size: 2rem;
+		font-weight: variables.$font-bold;
+
+		span {
+			color: variables.$primary-color;
+		}
+	}
+
+	&__description {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	&__cta {
+		display: inline-block;
+		background-color: variables.$primary-color;
+		color: variables.$white-color;
+		font-size: 1rem;
+		padding: 0.6rem 1.4rem;
+		border-radius: 5px;
+
+		&:hover {
+			background-color: lighten(variables.$primary-color, 8%);
+		}
+	}
+
+	@media screen and (min-width: 1024px) {
+		text-align: initial;
+
+		&__row {
+			flex-direction: row;
+			gap: 3rem;
+		}
+
+		&__title {
+			font-size: 3.4rem;
+		}
+
+		&__description {
+			font-size: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&__text-wrapper,
+		&__image-container {
+			flex: 1;
+		}
+
+		&__image-container {
+			justify-self: flex-end;
+		}
+	}
+}

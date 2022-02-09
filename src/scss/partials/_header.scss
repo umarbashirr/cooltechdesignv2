@@ -1,0 +1,32 @@
+@use 'variables';
+
+.header {
+	background-color: variables.$white-color;
+	display: flex;
+	padding: 20px;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__logo {
+		display: flex;
+		height: 60px;
+	}
+
+	&__links {
+		gap: 1rem;
+	}
+
+	&__link {
+		color: #444;
+		font-weight: 500;
+		text-transform: capitalize;
+
+		&:hover {
+			color: variables.$primary-color;
+		}
+	}
+}

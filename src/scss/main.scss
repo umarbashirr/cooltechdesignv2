@@ -1,0 +1,10 @@
+@use './partials/variables';
+
+// Import Global Styling
+@use './partials/global';
+
+// Import Header Styling
+@use './partials/_header';
+
+// Import Main Page Hero
+@use './partials/components/mainhero';
